@@ -3,7 +3,7 @@ events:
   azag: notify Test io:chat
   test: "give test:5"
   
-
+  test2: notify Test \n Test2 io:title
 
 
 

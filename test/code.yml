@@ -13,6 +13,6 @@ objectives:
 conditions:
 
   test: "location -2;63;-20;world 5"
-  
+  blabla: "location -2;63;-20;world 5"
 items:
   test: STONE

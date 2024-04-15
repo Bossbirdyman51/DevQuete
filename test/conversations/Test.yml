@@ -1,0 +1,26 @@
+conversations:
+  Test:
+    quester:
+      fr: Test
+    stop: "false"
+    first: "bonjour"
+    NPC_options:
+      bonjour:
+        text:
+          fr: "Bienvenue &6%player% &f! Que puis-je faire pour ton service?"
+        pointers: "question,bye"
+      question:
+        text:
+          fr: "Oui ?"
+      bye:
+        text:
+          fr: "Aurevoir !"
+    player_options:
+      question:
+        text:
+          fr: "J'ai quelques questions"
+        pointers: question
+      bye:
+        text:
+          fr: "Aurevoir"
+        pointers: bye

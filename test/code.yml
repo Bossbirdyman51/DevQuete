@@ -1,6 +1,15 @@
 events:
 
+  azag: notify Test io:chat
+  test: "give test:5"
+  
+
+
+
+
 objectives:
 
 conditions:
 
+items:
+  test: STONE

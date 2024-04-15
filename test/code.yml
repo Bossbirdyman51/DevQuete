@@ -5,11 +5,14 @@ events:
   
   test2: notify Test \n Test2 io:title
 
-
+  door: door -2;63;-20;world off
+  door_on: door -2;63;-20;world on conditions:test
 
 objectives:
 
 conditions:
 
+  test: "location -2;63;-20;world 5"
+  
 items:
   test: STONE

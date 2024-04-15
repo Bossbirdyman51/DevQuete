@@ -1,0 +1,4 @@
+enabled: true
+npcs:
+  0: "Test"
+default_language: "fr"

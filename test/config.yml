@@ -1,0 +1,12 @@
+variables:
+
+  r1_item: "iron_block" #Bloc à Donner
+  r1_qte: "15" #Quantité à Donner
+  r1_h: "2" #Nombre d'heure active sur le serveur
+  r1_money: "500" #Argent à donner
+
+  r2_item: "iron_block"
+  r2_qte: "15"
+  r2_h: "2"
+  r2_money: "500"
+

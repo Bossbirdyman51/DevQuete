@@ -1,0 +1,51 @@
+conversations:
+  Upgrade:
+    quester:
+      fr: Upgrade du Rang
+    stop: "false"
+    first: "bienvenue"
+    NPC_options:
+      bienvenue:
+        text:
+          fr: "Bienvenue %player% tu souhaite ne plus être un %ph.luckperms_prefix% ? Découvre comment monter ton rang !"
+        pointers: b_1,non
+      r1:
+        text:
+          fr: "[:paysan:] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
+        pointers: "r1,non"
+        conditions: "!group_gueux"
+      r1_done:
+        text:
+          fr: "Entendu te voila désormais :paysan: !"
+        events: upgrade,r1_obj
+        conditions: has_r1
+      r2:
+        text:
+          fr: "[:chevalier:] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux,!group_paysan"
+      r2_done:
+        text:
+          fr: "Entendu te voila désormais :chevalier: !"
+        events: upgrade,r2_obj
+        conditions: has_r2
+  
+    player_options:
+      b_1:
+        text:
+          fr: "Oui marre de cette vie de %ph.luckperms_prefix% comment faire !"
+        pointers: r1,r2
+      r1:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r1_done
+        conditions: has_r1
+      r2:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r2_done
+        conditions: has_r2
+        
+      non:
+        text:
+          fr: "Non merci"

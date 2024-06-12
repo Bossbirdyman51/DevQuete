@@ -1,18 +1,33 @@
 events:
 
-  azag: notify Test io:chat
-  test: "give test:5"
+  start_conv: "conversation Upgrade"
   
-  test2: notify Test \n Test2 io:title
+  upgrade: command lp user %player% promote grade_joueur
 
-  door: door -2;63;-20;world off
-  door_on: door -2;63;-20;world on conditions:test
+  r1_obj: folder r1_u1,r1_u2
+  r1_u1: "take r1_item:$r1_qte$ conditions:has_r1"
+  r1_u2: "money -$r1_money$"
+  
+  r2_obj: folder r2_u1,r2_u2
+  r2_u1: "take r2_item:$r2_qte$ conditions:has_r2"
+  r2_u2: "money -$r2_money$"
+  
 
-objectives:
+items:
+  r1_item: $r1_item$
+  r2_item: $r2_item$
 
 conditions:
+  has_r1: and r1_1,r1_2,r1_3
+  r1_1: "item r1_item:$r1_qte$"
+  r1_2: "numbercompare %ph.playtime_time_hours% >= $r1_h$"
+  r1_3: "money $r1_money$"
 
-  test: "location -2;63;-20;world 5"
-  blabla: "location -2;63;-20;world 5"
-items:
-  test: STONE
+
+  has_r2: and r2_1,r2_2,r2_3
+  r2_1: "item r2_item:$r2_qte$"
+  r2_2: "numbercompare %ph.playtime_time_hours% >= $r2_h$"
+  r2_3: "money $r2_money$"
+  
+  
+  

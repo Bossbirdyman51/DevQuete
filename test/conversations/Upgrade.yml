@@ -11,36 +11,143 @@ conversations:
         pointers: b_1,non
       r1:
         text:
-          fr: "[:paysan:] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
-        pointers: "r1,non"
-        conditions: "!group_gueux"
+          fr: "[:Paysan(ne):] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux"
       r1_done:
         text:
-          fr: "Entendu te voila désormais :paysan: !"
-        events: upgrade,r1_obj
-        conditions: has_r1
+          fr: "Entendu te voila désormais :Paysan(ne): !"
+        events: upgrade,r2_obj
+        conditions: has_r2
       r2:
         text:
-          fr: "[:chevalier:] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
-        pointers: "r2,non"
+          fr: "[:Citoyen(ne):] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
+        pointers: "r1,non"
         conditions: "group_gueux,!group_paysan"
       r2_done:
         text:
-          fr: "Entendu te voila désormais :chevalier: !"
+          fr: "Entendu te voila désormais :Citoyen(ne): !"
+        events: upgrade,r1_obj
+        conditions: has_r1
+      r3:
+        text:
+          fr: "[:Bourgeois(e):] Pour cela tu dois avoir : \n- être membre depuis &620h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen"
+      r3_done:
+        text:
+          fr: "Entendu te voila désormais :Bourgeois(e): !"
         events: upgrade,r2_obj
         conditions: has_r2
+      r4:
+        text:
+          fr: "[:Ecuyer(ière):] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
+        pointers: "r1,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois"
+      r4_done:
+        text:
+          fr: "Entendu te voila désormais :Ecuyer(ière): !"
+        events: upgrade,r1_obj
+        conditions: has_r1
+      r5:
+        text:
+          fr: "[:Chevalier(e):] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois,!group_ecuyer"
+      r5_done:
+        text:
+          fr: "Entendu te voila désormais :Chevalier(e): !"
+        events: upgrade,r2_obj
+        conditions: has_r2
+      r6:
+        text:
+          fr: "[:Baron(ne):] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
+        pointers: "r1,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois,!group_ecuyer,!group_chevalier"
+      r6_done:
+        text:
+          fr: "Entendu te voila désormais :Baron(ne): !"
+        events: upgrade,r1_obj
+        conditions: has_r1
+      r7:
+        text:
+          fr: "[:Seigneur(esse):] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois,!group_ecuyer,!group_chevalier,!group_baron"
+      r7_done:
+        text:
+          fr: "Entendu te voila désormais :Seigneur(esse): !"
+        events: upgrade,r2_obj
+        conditions: has_r2
+      r8:
+        text:
+          fr: "[:Duc(hess):] Pour cela tu dois avoir : \n- être membre depuis &62h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 15 &fblocs de fer \n-&6 500&f Kgolds"
+        pointers: "r1,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois,!group_ecuyer,!group_chevalier,!group_baron,!group_seigneur"
+      r8_done:
+        text:
+          fr: "Entendu te voila désormais :Duc(hess): !"
+        events: upgrade,r1_obj
+        conditions: has_r1
+      r9:
+        text:
+          fr: "[:Roi(Reine):] Pour cela tu dois avoir : \n- être membre depuis &610h&f tu es actuellement à &6%ph.playtime_time_hours% H &f\n-&6 10 &fblocs de diamant \n-&6 2500&f Kgolds"
+        pointers: "r2,non"
+        conditions: "group_gueux,!group_paysan,!group_citoyen,!group_bourgeois,!group_ecuyer,!group_chevalier,!group_baron,!group_seigneur,!group_duc"
+      r9_done:
+        text:
+          fr: "Entendu te voila désormais :Roi(Reine): !"
+        events: upgrade,r2_obj
+        conditions: has_r2
+
+      
   
     player_options:
       b_1:
         text:
           fr: "Oui marre de cette vie de %ph.luckperms_prefix% comment faire !"
-        pointers: r1,r2
+        pointers: r1,r2,r3,r4,r5,r6,r7,r8,r9
       r1:
         text:
           fr: "Je veux monter mon rang !"
         pointers: r1_done
         conditions: has_r1
       r2:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r2_done
+        conditions: has_r2
+      r3:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r1_done
+        conditions: has_r1
+      r4:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r2_done
+        conditions: has_r2
+      r5:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r1_done
+        conditions: has_r1
+      r6:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r2_done
+        conditions: has_r2
+      r8:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r1_done
+        conditions: has_r1
+      r9:
+        text:
+          fr: "Je veux monter mon rang !"
+        pointers: r2_done
+        conditions: has_r2
+      r10:
         text:
           fr: "Je veux monter mon rang !"
         pointers: r2_done

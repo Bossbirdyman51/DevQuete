@@ -11,11 +11,47 @@ events:
   r2_obj: folder r2_u1,r2_u2
   r2_u1: "take r2_item:$r2_qte$ conditions:has_r2"
   r2_u2: "money -$r2_money$"
+
+  r3_obj: folder r3_u1,r3_u2
+  r3_u1: "take r3_item:$r3_qte$ conditions:has_r3"
+  r3_u2: "money -$r1_money$"
+  
+  r4_obj: folder r4_u1,r4_u2
+  r4_u1: "take r4_item:$r4_qte$ conditions:has_r4"
+  r4_u2: "money -$r4_money$"
+
+  r5_obj: folder r5_u1,r5_u2
+  r5_u1: "take r5_item:$r5_qte$ conditions:has_r5"
+  r5_u2: "money -$r5_money$"
+  
+  r6_obj: folder r6_u1,r6_u2
+  r6_u1: "take r6_item:$r6_qte$ conditions:has_r6"
+  r6_u2: "money -$r6_money$"
+
+  r7_obj: folder r7_u1,r7_u2
+  r7_u1: "take r7_item:$r7_qte$ conditions:has_r7"
+  r7_u2: "money -$r7_money$"
+  
+  r8_obj: folder r8_u1,r8_u2
+  r8_u1: "take r8_item:$r8_qte$ conditions:has_r8"
+  r8_u2: "money -$r8_money$"
+
+  r9_obj: folder r9_u1,r9_u2
+  r9_u1: "take r9_item:$r9_qte$ conditions:has_r9"
+  r9_u2: "money -$r9_money$"
+
   
 
 items:
   r1_item: $r1_item$
   r2_item: $r2_item$
+  r3_item: $r3_item$
+  r4_item: $r4_item$
+  r5_item: $r5_item$
+  r6_item: $r6_item$
+  r7_item: $r7_item$
+  r8_item: $r8_item$
+  r9_item: $r9_item$
 
 conditions:
   has_r1: and r1_1,r1_2,r1_3
@@ -29,5 +65,47 @@ conditions:
   r2_2: "numbercompare %ph.playtime_time_hours% >= $r2_h$"
   r2_3: "money $r2_money$"
   
+
+  has_r3: and r3_1,r3_2,r3_3
+  r3_1: "item r3_item:$r3_qte$"
+  r3_2: "numbercompare %ph.playtime_time_hours% >= $r3_h$"
+  r3_3: "money $r3_money$"
+
+
+  has_r4: and r4_1,r4_2,r4_3
+  r4_1: "item r4_item:$r4_qte$"
+  r4_2: "numbercompare %ph.playtime_time_hours% >= $r4_h$"
+  r4_3: "money $r4_money$"
+  
+
+  has_r5: and r5_1,r5_2,r5_3
+  r5_1: "item r5_item:$r5_qte$"
+  r5_2: "numbercompare %ph.playtime_time_hours% >= $r5_h$"
+  r5_3: "money $r5_money$"
+
+
+  has_r6: and r6_1,r6_2,r6_3
+  r6_1: "item r6_item:$r6_qte$"
+  r6_2: "numbercompare %ph.playtime_time_hours% >= $r6_h$"
+  r6_3: "money $r6_money$"
+  
+
+  has_r7: and r7_1,r7_2,r7_3
+  r7_1: "item r7_item:$r7_qte$"
+  r7_2: "numbercompare %ph.playtime_time_hours% >= $r7_h$"
+  r7_3: "money $r7_money$"
+
+
+  has_r8: and r8_1,r8_2,r8_3
+  r8_1: "item r8_item:$r8_qte$"
+  r8_2: "numbercompare %ph.playtime_time_hours% >= $r8_h$"
+  r8_3: "money $r8_money$"
+  
+
+  has_r9: and r9_1,r9_2,r9_3
+  r9_1: "item r9_item:$r9_qte$"
+  r9_2: "numbercompare %ph.playtime_time_hours% >= $r9_h$"
+  r9_3: "money $r9_money$"
+
   
   

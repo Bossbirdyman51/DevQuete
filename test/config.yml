@@ -10,3 +10,43 @@ variables:
   r2_h: "2"
   r2_money: "500"
 
+  r3_item: "iron_block"
+  r3_qte: "15"
+  r3_h: "2"
+  r3_money: "500"
+  
+  r4_item: "iron_block"
+  r4_qte: "15"
+  r4_h: "2"
+  r4_money: "500"
+  
+  r5_item: "iron_block"
+  r5_qte: "15"
+  r5_h: "2"
+  r5_money: "500"
+  
+  r6_item: "iron_block"
+  r6_qte: "15"
+  r6_h: "2"
+  r6_money: "500"
+  
+  r7_item: "iron_block"
+  r7_qte: "15"
+  r7_h: "2"
+  r7_money: "500"
+  
+  r8_item: "iron_block"
+  r8_qte: "15"
+  r8_h: "2"
+  r8_money: "500"
+  
+  r9_item: "iron_block"
+  r9_qte: "15"
+  r9_h: "2"
+  r9_money: "500"
+  
+  r10_item: "iron_block"
+  r10_qte: "15"
+  r10_h: "2"
+  r10_money: "500"
+
